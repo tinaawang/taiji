@@ -1,0 +1,52 @@
+#taiJi {
+    width:0;
+    height:200px;
+    position:relative;
+    margin:50px auto;
+    border-left:100px solid #000;/*自动填充宽度*/
+    border-right:100px solid #fff;/*自动填充宽度*/
+    box-shadow:0 0 30px rgba(0,0,0,0.5);/*边框阴影*/
+    border-radius:100%;
+    animation:rotation 2.5s linear infinite;
+    -webkit-animation:rotation 2.5s linear infinite;
+    -moz-animation:rotation 2.5s linear infinite;}
+#taiJi:before,
+#taiJi:after {
+    position:absolute;
+    content:"";
+    display:block;}
+#taiJi:before {
+    width:100px;
+    height:100px;
+    top:0;
+    left:-50px;
+    z-index:1;
+    background-color:#fff;
+    border-radius:50%;
+
+    box-shadow:0 100px 0 #000;
+}
+
+#taiJi:after {
+    width:30px;
+    height:30px;
+    top:35px;
+    left:-15px;
+    z-index:2;
+    background-color:#000;
+    border-radius:50%;
+    box-shadow:0 100px 0 #fff;
+}
+@keyframes rotation {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(-360deg);}
+}
+@-webkit-keyframes rotation {
+    0% {-moz-transform:rotate(0deg);}
+    100% {-moz-transform:rotate(-360deg);}
+}
+
+@-moz-keyframes rotation {
+    0% {-moz-transform:rotate(0deg);}
+    100% {-moz-transform:rotate(-360deg);}
+}
